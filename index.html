@@ -25,6 +25,12 @@
     .section-head{margin-bottom:30px}.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
     .card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:24px;box-shadow:5px 5px 0 var(--gold);transition:.2s}.card:hover{transform:translateY(-4px)}
     .card p{color:var(--muted);margin-bottom:0}
+    .about-feature-card{padding:0;overflow:hidden;border-radius:20px;background:var(--surface);border:1px solid var(--line);box-shadow:0 8px 24px rgba(36,18,65,.09);transition:transform .25s ease,box-shadow .25s ease}
+    .about-feature-card:hover{transform:translateY(-7px);box-shadow:0 16px 34px rgba(36,18,65,.16)}
+    .about-feature-image{display:block;width:100%;height:175px;object-fit:cover;background:#e9e2f5}
+    .about-feature-content{padding:20px 24px 24px}
+    .about-feature-content h3{margin:13px 0 8px}
+    .about-feature-content p{color:var(--muted);margin:0}
     .project-card{padding:0;overflow:hidden;box-shadow:0 8px 24px rgba(36,18,65,.09);border-radius:20px;transition:transform .25s ease,box-shadow .25s ease}
     .project-card:hover{transform:translateY(-7px);box-shadow:0 16px 34px rgba(36,18,65,.16)}
     .project-image{display:block;width:100%;height:190px;object-fit:cover;background:#e9e2f5}
@@ -104,10 +110,10 @@
   <section id="about"><div class="wrap">
     <div class="section-head"><span class="eyebrow">A LITTLE ABOUT ME</span><h2>Curious mind. Creative work.</h2></div>
     <p class="muted">I'm learning Digital Marketing with AI and building practical skills through hands-on projects. From creating websites to experimenting with AI-powered content, I like exploring how technology can make ideas real.</p>
-    <div class="cards" style="margin-top:28px">
-      <article class="card"><span class="tag">01 · CREATE</span><h3>Build digital experiences</h3><p>Designing websites, chatbots and interactive projects.</p></article>
-      <article class="card"><span class="tag">02 · EXPLORE</span><h3>Learn AI tools</h3><p>Trying new tools for writing, design, productivity and creativity.</p></article>
-      <article class="card"><span class="tag">03 · GROW</span><h3>Keep improving</h3><p>Learning by making projects, testing ideas and improving each version.</p></article>
+    <div class="cards about-feature-cards" style="margin-top:28px">
+      <article class="card about-feature-card"><img class="about-feature-image" src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=85" alt="Laptop displaying a web development workspace" loading="lazy"><div class="about-feature-content"><span class="tag">01 · CREATE</span><h3>Build digital experiences</h3><p>Designing websites, chatbots and interactive projects.</p></div></article>
+      <article class="card about-feature-card"><img class="about-feature-image" src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=900&q=85" alt="Abstract artificial intelligence neural network visual" loading="lazy"><div class="about-feature-content"><span class="tag">02 · EXPLORE</span><h3>Learn AI tools</h3><p>Trying new tools for writing, design, productivity and creativity.</p></div></article>
+      <article class="card about-feature-card"><img class="about-feature-image" src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=900&q=85" alt="Planning and reviewing work at a desk" loading="lazy"><div class="about-feature-content"><span class="tag">03 · GROW</span><h3>Keep improving</h3><p>Learning by making projects, testing ideas and improving each version.</p></div></article>
     </div>
   </div></section>
   <section id="projects"><div class="wrap">
