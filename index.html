@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Vanshika's portfolio — digital marketing, AI tools, websites, chatbots and creative projects.">
+  <title>Vanshika | Digital Marketing & AI Projects</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#f6f3ff;--surface:#fff;--ink:#1d1233;--muted:#625875;--line:#ded6ef;--accent:#d6246e;--gold:#ffbd26;--head:'Bricolage Grotesque',sans-serif;--body:'DM Sans',sans-serif}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:85px}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 var(--body)}
+    a{color:inherit}button{font:inherit;cursor:pointer}.wrap{width:min(1080px,calc(100% - 40px));margin:auto}
+    header{position:sticky;top:0;z-index:10;background:#f6f3fff0;backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+    nav{min-height:70px;display:flex;align-items:center;gap:24px}.logo{font:800 23px var(--head);text-decoration:none;margin-right:auto}.navlinks{display:flex;gap:22px}.navlinks a{text-decoration:none;color:var(--muted);font-weight:600}.navlinks a:hover{color:var(--accent)}
+    #theme{border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:8px 13px;border-radius:30px}
+    section{padding:82px 0}.hero{min-height:calc(100vh - 70px);display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:55px}
+    .eyebrow{display:inline-block;background:#ffe3ef;color:#9e174d;border-radius:30px;padding:6px 14px;font-weight:700;font-size:13px}
+    h1,h2,h3{font-family:var(--head);line-height:1.12;margin:0}h1{font-size:clamp(46px,7vw,82px);letter-spacing:-2px;margin:18px 0}h2{font-size:clamp(32px,4.5vw,48px);margin-bottom:14px}h3{font-size:22px}
+    .type{font:600 clamp(20px,3vw,28px) var(--head);color:var(--accent);min-height:1.5em}.lead,.muted{color:var(--muted);max-width:58ch}
+    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}.btn{display:inline-block;text-decoration:none;border:2px solid var(--ink);border-radius:12px;padding:11px 20px;font-weight:700}.btn.primary{background:var(--accent);border-color:var(--accent);color:white}
+    .portrait{width:min(100%,390px);aspect-ratio:4/5;justify-self:center;border:3px solid var(--ink);border-radius:28px;background:linear-gradient(145deg,#ffd46d,#f6a5ca 55%,#a99aff);box-shadow:12px 12px 0 var(--accent);display:grid;place-items:center;text-align:center;padding:25px}
+    .portrait span{font:800 clamp(60px,10vw,100px) var(--head);color:#fff;text-shadow:3px 4px 0 #6c347b}
+    .section-head{margin-bottom:30px}.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+    .card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:24px;box-shadow:5px 5px 0 var(--gold);transition:.2s}.card:hover{transform:translateY(-4px)}
+    .card p{color:var(--muted);margin-bottom:0}.tag{display:inline-block;background:#ffedbd;color:#634400;border-radius:20px;padding:4px 11px;font-size:12px;font-weight:700;margin-bottom:13px}
+    .skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}.skill{background:var(--surface);border:1px solid var(--line);padding:18px;border-radius:14px}.skilltop{display:flex;justify-content:space-between;font-weight:700;margin-bottom:10px}.track{height:9px;background:#e8e1f2;border-radius:20px;overflow:hidden}.fill{height:100%;width:0;background:linear-gradient(90deg,#8b5cf6,#d6246e);border-radius:20px;transition:width 1s}
+    .tools{display:flex;flex-wrap:wrap;gap:10px}.tools span{background:var(--surface);border:1px solid var(--line);padding:8px 14px;border-radius:25px;font-weight:600}
+    .contact{background:var(--ink);color:white;border-radius:24px;padding:38px}.contact p{color:#d4c9e8}.contact a{color:#ffd46d}
+    footer{text-align:center;color:var(--muted);padding:30px 0;border-top:1px solid var(--line)}
+    .dark{--bg:#140e24;--surface:#211936;--ink:#f3eeff;--muted:#b9adcf;--line:#3a2d53;--accent:#ff5c9d;--gold:#e4ae37;color-scheme:dark}
+    .dark header{background:#140e24ed}.dark .eyebrow{background:#48233b;color:#ffb7d3}.dark .tag{background:#493b20;color:#ffe3a1}
+    @media(max-width:760px){nav{flex-wrap:wrap;padding:12px 0}.navlinks{order:3;width:100%;overflow:auto;gap:18px;padding-bottom:5px}.navlinks a{white-space:nowrap}.hero{grid-template-columns:1fr;gap:35px;padding-top:55px}.portrait{max-width:280px;order:-1}section{padding:60px 0}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}}
+  </style>
+</head>
+<body>
+<header><nav class="wrap">
+  <a class="logo" href="#home">Vanshika<span style="color:var(--accent)">.</span></a>
+  <div class="navlinks"><a href="#home">Home</a><a href="#about">About</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#contact">Contact</a></div>
+  <button id="theme" type="button" aria-label="Toggle color theme">☾</button>
+</nav></header>
+<main>
+  <section class="hero wrap" id="home">
+    <div>
+      <span class="eyebrow">DIGITAL MARKETING · AI · CREATIVE</span>
+      <h1>Hi, I'm<br>Vanshika.</h1>
+      <div class="type">I'm a <span id="type">Digital Marketer</span></div>
+      <p class="lead">I explore the power of AI to create websites, chatbots, videos and fun digital experiences. I enjoy learning new tools and turning ideas into projects.</p>
+      <div class="actions"><a class="btn primary" href="#projects">Explore my work</a><a class="btn" href="#contact">Get in touch</a></div>
+    </div>
+    <div class="portrait" aria-label="Portfolio profile illustration"><span>VS</span></div>
+  </section>
+  <section id="about"><div class="wrap">
+    <div class="section-head"><span class="eyebrow">A LITTLE ABOUT ME</span><h2>Curious mind. Creative work.</h2></div>
+    <p class="muted">I'm learning Digital Marketing with AI and building practical skills through hands-on projects. From creating websites to experimenting with AI-powered content, I like exploring how technology can make ideas real.</p>
+    <div class="cards" style="margin-top:28px">
+      <article class="card"><span class="tag">01 · CREATE</span><h3>Build digital experiences</h3><p>Designing websites, chatbots and interactive projects.</p></article>
+      <article class="card"><span class="tag">02 · EXPLORE</span><h3>Learn AI tools</h3><p>Trying new tools for writing, design, productivity and creativity.</p></article>
+      <article class="card"><span class="tag">03 · GROW</span><h3>Keep improving</h3><p>Learning by making projects, testing ideas and improving each version.</p></article>
+    </div>
+  </div></section>
+  <section id="projects"><div class="wrap">
+    <div class="section-head"><span class="eyebrow">SELECTED WORK</span><h2>Projects I've explored</h2><p class="muted">A few projects from my learning and creative journey.</p></div>
+    <div class="cards">
+      <article class="card"><span class="tag">WEBSITE</span><h3>Bal Vikas Global School</h3><p>A website project created for a school, with information organized into clear sections.</p><p><a href="https://bvgs.onrender.com/about.html" target="_blank" rel="noopener">View website ↗</a></p></article>
+      <article class="card"><span class="tag">GAME</span><h3>Cycle Racer</h3><p>A browser-based cycle racing game made as a fun interactive project.</p><p><a href="https://remix-cycle-racer-4096.ai.studio/" target="_blank" rel="noopener">Play project ↗</a></p></article>
+      <article class="card"><span class="tag">GAME</span><h3>Bubble Blast</h3><p>A bubble-blast game project. Its code is available on GitHub.</p><p><a href="https://github.com/vanshikasharma032009-cyber/BUBBLE-BLAST-GAME" target="_blank" rel="noopener">View on GitHub ↗</a></p></article>
+    </div>
+  </div></section>
+  <section id="skills"><div class="wrap">
+    <div class="section-head"><span class="eyebrow">WHAT I'M LEARNING</span><h2>Skills & AI tools</h2></div>
+    <div class="skills">
+      <div class="skill"><div class="skilltop"><span>AI tools & prompting</span><span>85%</span></div><div class="track"><div class="fill" data-width="85"></div></div></div>
+      <div class="skill"><div class="skilltop"><span>Website building</span><span>80%</span></div><div class="track"><div class="fill" data-width="80"></div></div></div>
+      <div class="skill"><div class="skilltop"><span>Chatbot building</span><span>80%</span></div><div class="track"><div class="fill" data-width="80"></div></div></div>
+      <div class="skill"><div class="skilltop"><span>Digital marketing</span><span>75%</span></div><div class="track"><div class="fill" data-width="75"></div></div></div>
+      <div class="skill"><div class="skilltop"><span>Canva & design</span><span>70%</span></div><div class="track"><div class="fill" data-width="70"></div></div></div>
+      <div class="skill"><div class="skilltop"><span>Video editing</span><span>65%</span></div><div class="track"><div class="fill" data-width="65"></div></div></div>
+    </div>
+    <h3 style="margin:38px 0 18px">Tools I explore</h3>
+    <div class="tools"><span>ChatGPT</span><span>Claude</span><span>Gemini</span><span>Perplexity</span><span>Copilot</span><span>Canva</span><span>Midjourney</span><span>Runway</span><span>CapCut</span><span>ElevenLabs</span><span>Gamma</span><span>Notion AI</span><span>Replit</span><span>OpenCode</span></div>
+  </div></section>
+  <section id="contact"><div class="wrap"><div class="contact">
+    <span class="eyebrow">LET'S CONNECT</span><h2 style="margin-top:15px">Have an idea?</h2>
+    <p>For project enquiries or questions about my work, you can reach out by email.</p>
+    <a class="btn primary" href="mailto:vanshikasharma032009@gmail.com">Send an email ↗</a>
+  </div></div></section>
+</main>
+<footer><div class="wrap">© <span id="year"></span> Vanshika. Made with curiosity and creativity.</div></footer>
+<script>
+  const words=["Digital Marketer","AI Content Creator","Website Builder","Chatbot Maker"];
+  let wi=0,ci=0,del=false;const typed=document.getElementById("type");
+  function typeLoop(){const word=words[wi];ci+=del?-1:1;typed.textContent=word.slice(0,ci);let delay=del?45:90;if(!del&&ci===word.length){del=true;delay=1300}else if(del&&ci===0){del=false;wi=(wi+1)%words.length;delay=250}setTimeout(typeLoop,delay)}
+  if(!matchMedia("(prefers-reduced-motion: reduce)").matches)typeLoop();
+  document.getElementById("theme").addEventListener("click",()=>{document.body.classList.toggle("dark");document.getElementById("theme").textContent=document.body.classList.contains("dark")?"☀":"☾"});
+  document.getElementById("year").textContent=new Date().getFullYear();
+  const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.style.width=entry.target.dataset.width+"%";observer.unobserve(entry.target)}}),{threshold:.3});
+  document.querySelectorAll(".fill").forEach(el=>observer.observe(el));
+</script>
+</body>
+</html>
