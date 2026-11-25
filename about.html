@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Vanshika's portfolio — digital marketing, AI tools, websites, chatbots and creative projects.">
+  <title>Vanshika | Digital Marketing & AI Projects</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <title>About | Vanshika Portfolio</title><style>
+    :root{--bg:#f6f3ff;--surface:#fff;--ink:#1d1233;--muted:#625875;--line:#ded6ef;--accent:#d6246e;--gold:#ffbd26;--head:'Bricolage Grotesque',sans-serif;--body:'DM Sans',sans-serif}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:85px}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 var(--body)}
+    a{color:inherit}button{font:inherit;cursor:pointer}.wrap{width:min(1080px,calc(100% - 40px));margin:auto}
+    header{position:sticky;top:0;z-index:10;background:#f6f3fff0;backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+    nav{min-height:70px;display:flex;align-items:center;gap:24px}.logo{font:800 23px var(--head);text-decoration:none;margin-right:auto}.navlinks{display:flex;gap:22px}.navlinks a{text-decoration:none;color:var(--muted);font-weight:600}.navlinks a:hover{color:var(--accent)}
+    #theme{border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:8px 13px;border-radius:30px}
+    section{padding:82px 0}.hero{min-height:calc(100vh - 70px);display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:55px}
+    .eyebrow{display:inline-block;background:#ffe3ef;color:#9e174d;border-radius:30px;padding:6px 14px;font-weight:700;font-size:13px}
+    h1,h2,h3{font-family:var(--head);line-height:1.12;margin:0}h1{font-size:clamp(46px,7vw,82px);letter-spacing:-2px;margin:18px 0}h2{font-size:clamp(32px,4.5vw,48px);margin-bottom:14px}h3{font-size:22px}
+    .type{font:600 clamp(20px,3vw,28px) var(--head);color:var(--accent);min-height:1.5em}.lead,.muted{color:var(--muted);max-width:58ch}
+    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}.btn{display:inline-block;text-decoration:none;border:2px solid var(--ink);border-radius:12px;padding:11px 20px;font-weight:700}.btn.primary{background:var(--accent);border-color:var(--accent);color:white}
+    .portrait{width:min(100%,390px);aspect-ratio:4/5;justify-self:center;border:3px solid var(--ink);border-radius:28px;background:linear-gradient(145deg,#ffd46d,#f6a5ca 55%,#a99aff);box-shadow:12px 12px 0 var(--accent);display:grid;place-items:center;text-align:center;padding:25px}
+    .portrait span{font:800 clamp(60px,10vw,100px) var(--head);color:#fff;text-shadow:3px 4px 0 #6c347b}
+    .section-head{margin-bottom:30px}.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+    .card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:24px;box-shadow:5px 5px 0 var(--gold);transition:.2s}.card:hover{transform:translateY(-4px)}
+    .card p{color:var(--muted);margin-bottom:0}
+    .about-feature-card{padding:0;overflow:hidden;border-radius:20px;background:var(--surface);border:1px solid var(--line);box-shadow:0 8px 24px rgba(36,18,65,.09);transition:transform .25s ease,box-shadow .25s ease}
+    .about-feature-card:hover{transform:translateY(-7px);box-shadow:0 16px 34px rgba(36,18,65,.16)}
+    .about-feature-image{display:block;width:100%;height:175px;object-fit:cover;background:#e9e2f5}
+    .about-feature-content{padding:20px 24px 24px}
+    .about-feature-content h3{margin:13px 0 8px}
+    .about-feature-content p{color:var(--muted);margin:0}
+    .project-card{padding:0;overflow:hidden;box-shadow:0 8px 24px rgba(36,18,65,.09);border-radius:20px;transition:transform .25s ease,box-shadow .25s ease}
+    .project-card:hover{transform:translateY(-7px);box-shadow:0 16px 34px rgba(36,18,65,.16)}
+    .project-image{display:block;width:100%;height:190px;object-fit:cover;background:#e9e2f5}
+    .project-content{padding:22px 24px 24px}
+    .project-content p{color:var(--muted)}
+    .project-content a{font-weight:700;text-decoration-thickness:1px;text-underline-offset:4px;color:var(--accent)}
+    .project-content a:hover{text-decoration-thickness:2px}
+    @media(max-width:760px){.project-image{height:175px}}
+    .tag{display:inline-block;background:#ffedbd;color:#634400;border-radius:20px;padding:4px 11px;font-size:12px;font-weight:700;margin-bottom:13px}
+    .skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}.skill{background:var(--surface);border:1px solid var(--line);padding:18px;border-radius:14px}.skilltop{display:flex;justify-content:space-between;font-weight:700;margin-bottom:10px}.track{height:9px;background:#e8e1f2;border-radius:20px;overflow:hidden}.fill{height:100%;width:0;background:linear-gradient(90deg,#8b5cf6,#d6246e);border-radius:20px;transition:width 1s}
+    .tools{display:flex;flex-wrap:wrap;gap:10px}.tools span{background:var(--surface);border:1px solid var(--line);padding:8px 14px;border-radius:25px;font-weight:600}
+    .contact{background:var(--ink);color:white;border-radius:24px;padding:38px}.contact p{color:#d4c9e8}.contact a{color:#ffd46d}
+    footer{text-align:center;color:var(--muted);padding:30px 0;border-top:1px solid var(--line)}
+    .dark{--bg:#140e24;--surface:#211936;--ink:#f3eeff;--muted:#b9adcf;--line:#3a2d53;--accent:#ff5c9d;--gold:#e4ae37;color-scheme:dark}
+    .dark header{background:#140e24ed}.dark .eyebrow{background:#48233b;color:#ffb7d3}.dark .tag{background:#493b20;color:#ffe3a1}
+    @media(max-width:760px){nav{flex-wrap:wrap;padding:12px 0}.navlinks{order:3;width:100%;overflow:auto;gap:18px;padding-bottom:5px}.navlinks a{white-space:nowrap}.hero{grid-template-columns:1fr;gap:35px;padding-top:55px}.portrait{max-width:280px;order:-1}section{padding:60px 0}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}}
+  
+    /* Portfolio chatbot */
+    #chat-launcher{background:#fff url("data:image/webp;base64,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") center/cover no-repeat;border:3px solid var(--accent);color:transparent;font-size:0;overflow:hidden}
+    #chat-panel{position:fixed;right:22px;bottom:94px;z-index:1000;width:min(360px,calc(100vw - 28px));height:480px;max-height:calc(100vh - 125px);background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:20px;box-shadow:0 16px 50px #160d2b35;display:flex;flex-direction:column;overflow:hidden}
+    #chat-panel[hidden]{display:none}
+    .chat-head{display:flex;align-items:center;gap:11px;padding:15px 16px;background:var(--ink);color:#fff}
+    .chat-avatar{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:var(--accent);font-size:19px}
+    .chat-head strong{display:block;font:700 16px var(--head)}.chat-head small{color:#d8cde8}
+    #chat-close{margin-left:auto;border:0;background:transparent;color:#fff;font-size:23px}
+    #chat-log{flex:1;overflow:auto;padding:15px;display:flex;flex-direction:column;gap:10px}
+    .chat-msg{max-width:88%;padding:10px 12px;border-radius:14px;font-size:14px;line-height:1.5;overflow-wrap:anywhere}
+    .chat-msg.bot{align-self:flex-start;background:var(--bg);border:1px solid var(--line)}
+    .chat-msg.user{align-self:flex-end;background:var(--accent);color:#fff}
+    .chat-msg a{color:inherit;font-weight:700}
+    #chat-quick{display:flex;gap:7px;flex-wrap:wrap;padding:0 13px 10px}
+    #chat-quick button{border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:18px;padding:6px 10px;font-size:12px}
+    #chat-form{display:flex;gap:8px;padding:12px;border-top:1px solid var(--line)}
+    #chat-input{min-width:0;flex:1;border:1px solid var(--line);border-radius:22px;padding:10px 13px;background:var(--bg);color:var(--ink);font:14px var(--body)}
+    #chat-form button{border:0;border-radius:50%;width:40px;height:40px;background:var(--accent);color:white;font-size:17px}
+    @media(max-width:480px){#chat-launcher{right:15px;bottom:15px}#chat-panel{right:14px;bottom:85px}}
+
+  
+    .tool-orbit-stage{position:relative;width:min(100%,760px);aspect-ratio:1;margin:22px auto 8px;display:grid;place-items:center;isolation:isolate}
+    .tool-orbit-stage:before{content:"";position:absolute;inset:8%;border-radius:50%;background:radial-gradient(circle,#182c66 0%,#101638 53%,#080d20 100%);box-shadow:0 0 24px #277bff22,inset 0 0 30px #00d9ff12}
+    .tool-orbit-stage:after{content:"";position:absolute;inset:17%;border-radius:50%;border:1px solid rgba(45,190,255,.16);background:radial-gradient(circle,transparent 0 49.6%,rgba(45,190,255,.12) 49.9% 50.1%,transparent 50.4%);pointer-events:none}
+    .orbit-center{position:absolute;z-index:5;width:15%;aspect-ratio:1;border-radius:50%;display:grid;place-content:center;text-align:center;color:#fff;background:radial-gradient(circle at 35% 25%,#193b73,#080e24 72%);border:2px solid #5ceaff;box-shadow:0 0 12px #20dfff,0 0 30px #167aff66,inset 0 0 15px #39dfff44;font-family:var(--head)}
+    .orbit-center strong{font-size:clamp(15px,3vw,28px);letter-spacing:1px;line-height:1.1}.orbit-center span{font-size:clamp(8px,1.2vw,11px);letter-spacing:2px;color:#ff72d2;font-weight:800}
+    .tool-orbit{position:absolute;inset:0;border-radius:50%;animation:orbit-spin var(--orbit-duration) linear infinite;z-index:2}
+    .tool-orbit:nth-of-type(2){inset:0;--orbit-duration:65s}
+    .tool-orbit:nth-of-type(3){inset:0;--orbit-duration:48s;animation-direction:reverse}
+    .tool-orbit:nth-of-type(4){inset:0;--orbit-duration:34s}
+    .orbit-item{position:absolute;left:50%;top:50%;width:clamp(36px,6vw,58px);height:clamp(36px,6vw,58px);margin:-29px 0 0 -29px;border-radius:50%;display:grid;place-items:center;background:#fff;border:2px solid #d9faff;box-shadow:0 0 14px #32dfff66;transform:rotate(var(--angle)) translateY(calc(var(--orbit-radius) * -1)) rotate(calc(var(--angle) * -1))}
+    .orbit-item img{width:58%;height:58%;object-fit:contain}
+    .orbit-item span{position:absolute;top:calc(100% + 4px);left:50%;transform:translateX(-50%);font-size:9px;line-height:1.1;color:#fff;text-align:center;text-shadow:0 1px 4px #000;white-space:nowrap;font-weight:700;max-width:92px}
+    .tool-orbit:hover{animation-play-state:paused}
+    @keyframes orbit-spin{to{transform:rotate(360deg)}}
+    @media(max-width:560px){.tool-orbit-stage{width:100%;}.orbit-center{width:27%}.orbit-item{width:34px;height:34px;margin:-17px 0 0 -17px}.orbit-item span{font-size:7px}}
+    @media(prefers-reduced-motion:reduce){.tool-orbit{animation:none}}
+    @media(prefers-reduced-motion:reduce){.tools-track{animation:none;flex-wrap:wrap;width:100%;justify-content:center}.tools-marquee{mask-image:none}}
+
+  
+.navlinks a[aria-current="page"]{color:var(--accent);font-weight:800}.page-main{min-height:calc(100vh - 145px)}
+</style></head><body><header><nav class="wrap"><a class="logo" href="index.html">Vanshika<span style="color:var(--accent)">.</span></a><div class="navlinks"><a  href="index.html">Home</a><a aria-current="page" href="about.html">About</a><a  href="projects.html">Projects</a><a  href="skills.html">Skills</a><a  href="contact.html">Contact</a></div><button id="theme" type="button" aria-label="Toggle color theme">☾</button></nav></header><main class="page-main"><section id="about"><div class="wrap">
+    <div class="section-head"><span class="eyebrow">A LITTLE ABOUT ME</span><h2>Curious mind. Creative work.</h2></div>
+    <p class="muted">I'm learning Digital Marketing with AI and building practical skills through hands-on projects. From creating websites to experimenting with AI-powered content, I like exploring how technology can make ideas real.</p>
+    <div class="cards about-feature-cards" style="margin-top:28px">
+      <article class="card about-feature-card"><img class="about-feature-image" src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=85" alt="Laptop displaying a web development workspace" loading="lazy"><div class="about-feature-content"><span class="tag">01 · CREATE</span><h3>Build digital experiences</h3><p>Designing websites, chatbots and interactive projects.</p></div></article>
+      <article class="card about-feature-card"><img class="about-feature-image" src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=900&q=85" alt="Abstract artificial intelligence neural network visual" loading="lazy"><div class="about-feature-content"><span class="tag">02 · EXPLORE</span><h3>Learn AI tools</h3><p>Trying new tools for writing, design, productivity and creativity.</p></div></article>
+      <article class="card about-feature-card"><img class="about-feature-image" src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=900&q=85" alt="Planning and reviewing work at a desk" loading="lazy"><div class="about-feature-content"><span class="tag">03 · GROW</span><h3>Keep improving</h3><p>Learning by making projects, testing ideas and improving each version.</p></div></article>
+    </div>
+  </div></section></main><footer><div class="wrap">© <span id="year"></span> Vanshika. Made with curiosity and creativity.</div></footer><script>
+  const words=["Digital Marketer","AI Content Creator","Website Builder","Chatbot Maker"];
+  let wi=0,ci=0,del=false;const typed=document.getElementById("type");
+  function typeLoop(){const word=words[wi];ci+=del?-1:1;typed.textContent=word.slice(0,ci);let delay=del?45:90;if(!del&&ci===word.length){del=true;delay=1300}else if(del&&ci===0){del=false;wi=(wi+1)%words.length;delay=250}setTimeout(typeLoop,delay)}
+  if(typed&&!matchMedia("(prefers-reduced-motion: reduce)").matches)typeLoop();
+  const themeBtn=document.getElementById("theme");if(themeBtn)themeBtn.addEventListener("click",()=>{document.body.classList.toggle("dark");themeBtn.textContent=document.body.classList.contains("dark")?"☀":"☾"});
+  const yearEl=document.getElementById("year");if(yearEl)yearEl.textContent=new Date().getFullYear();
+  const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.style.width=entry.target.dataset.width+"%";observer.unobserve(entry.target)}}),{threshold:.3});
+  document.querySelectorAll(".fill").forEach(el=>observer.observe(el));
+</script><div id="chatbot-widget">
+  <section id="chat-panel" aria-label="Portfolio chat assistant" hidden>
+    <div class="chat-head"><div class="chat-avatar">✦</div><div><strong>Vanshika's Assistant</strong><small>Ask about projects, skills & contact</small></div><button id="chat-close" type="button" aria-label="Close chat">×</button></div>
+    <div id="chat-log" aria-live="polite"><div class="chat-msg bot">Namaste! Main Vanshika ka portfolio assistant hoon. Aap unke projects, skills, AI tools ya contact ke baare mein pooch sakte hain.</div></div>
+    <div id="chat-quick"><button type="button" data-question="Projects dikhao">Projects</button><button type="button" data-question="Skills aur AI tools">Skills & AI tools</button><button type="button" data-question="Contact kaise karein?">Contact</button></div>
+    <form id="chat-form"><input id="chat-input" type="text" placeholder="Type your message..." autocomplete="off" aria-label="Type your message" required><button type="submit" aria-label="Send message">➤</button></form>
+  </section>
+  <button id="chat-launcher" type="button" aria-label="Open chat" aria-expanded="false"></button>
+</div>
+<script>
+(function(){
+  const launcher=document.getElementById('chat-launcher'),panel=document.getElementById('chat-panel'),close=document.getElementById('chat-close'),log=document.getElementById('chat-log'),form=document.getElementById('chat-form'),input=document.getElementById('chat-input');
+  if(!launcher||!panel)return;
+  const wa='https://wa.me/919671970922',mail='mailto:vanshikasharma032009@gmail.com';
+  function toggle(open){panel.hidden=!open;launcher.setAttribute('aria-expanded',String(open));if(open)input.focus()}
+  launcher.addEventListener('click',()=>toggle(panel.hidden));close.addEventListener('click',()=>toggle(false));
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!panel.hidden)toggle(false)});
+  function add(text,who,links){const el=document.createElement('div');el.className='chat-msg '+who;el.textContent=text;if(links){links.forEach(item=>{const a=document.createElement('a');a.href=item.href;a.textContent=' '+item.label;a.target=item.href.startsWith('http')?'_blank':'_self';a.rel='noopener noreferrer';el.appendChild(a)})}log.appendChild(el);log.scrollTop=log.scrollHeight}
+  function answer(q){
+    const s=q.toLowerCase(),hi=/[ऀ-ॿ]|kaise|kya|batao|dikhao|hai|karna|karo|mujhe|aap|namaste|hindi|kitna/.test(s);
+    if(/hello|hi\b|hey|namaste|hii/.test(s))return hi?'Namaste! Aap Vanshika ke projects, skills, AI tools ya contact ke baare mein pooch sakte hain.':'Hello! Ask me about Vanshika’s projects, skills, AI tools or contact details.';
+    if(/project|work|website|game|cycle|bubble/.test(s))return hi?'Vanshika ke portfolio mein Bal Vikas Global School website, Cycle Racer game aur Bubble Blast game shamil hain.':'Vanshika’s featured work includes the Bal Vikas Global School website, Cycle Racer game and Bubble Blast game.';
+    if(/skill|tool|ai|chatgpt|claude|gemini|canva/.test(s))return hi?'Vanshika AI tools aur prompting, website building, chatbot building, digital marketing, Canva design aur video editing seekh rahi hain. Tools mein ChatGPT, Claude, Gemini, Canva, Runway aur CapCut shamil hain.':'Vanshika is learning AI prompting, website building, chatbot building, digital marketing, Canva design and video editing. Tools include ChatGPT, Claude, Gemini, Canva, Runway and CapCut.';
+    if(/contact|phone|number|whatsapp|email|hire|price|rate|sampark|baat/.test(s))return hi?'Aap WhatsApp ya email par contact kar sakte hain. Project pricing ke liye directly message karein.':'You can contact Vanshika on WhatsApp or email. Please message her directly for project pricing.';
+    if(/about|who|vanshika|kaun|kahan|where/.test(s))return hi?'Vanshika Digital Marketing with AI seekh rahi hain aur websites, chatbots, videos aur games banati hain.':'Vanshika is learning Digital Marketing with AI and builds websites, chatbots, videos and games.';
+    return hi?'Is baare mein portfolio par detail available nahi hai. Aap Vanshika ko WhatsApp ya email kar sakte hain.':'That detail is not listed on the portfolio. You can ask Vanshika directly on WhatsApp or email.';
+  }
+  function send(q){q=(q||'').trim();if(!q)return;add(q,'user');const a=answer(q);const links=/contact|phone|number|whatsapp|email|hire|sampark|baat|price|rate/i.test(q)?[{href:wa,label:'WhatsApp'},{href:mail,label:'Email'}]:[];add(a,'bot',links)}
+  form.addEventListener('submit',e=>{e.preventDefault();send(input.value);input.value='';input.focus()});
+  document.querySelectorAll('#chat-quick button').forEach(b=>b.addEventListener('click',()=>send(b.dataset.question)));
+})();
+</script>
+
+</body></html>
