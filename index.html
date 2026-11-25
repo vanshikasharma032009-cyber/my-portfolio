@@ -24,7 +24,16 @@
     .portrait span{font:800 clamp(60px,10vw,100px) var(--head);color:#fff;text-shadow:3px 4px 0 #6c347b}
     .section-head{margin-bottom:30px}.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
     .card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:24px;box-shadow:5px 5px 0 var(--gold);transition:.2s}.card:hover{transform:translateY(-4px)}
-    .card p{color:var(--muted);margin-bottom:0}.tag{display:inline-block;background:#ffedbd;color:#634400;border-radius:20px;padding:4px 11px;font-size:12px;font-weight:700;margin-bottom:13px}
+    .card p{color:var(--muted);margin-bottom:0}
+    .project-card{padding:0;overflow:hidden;box-shadow:0 8px 24px rgba(36,18,65,.09);border-radius:20px;transition:transform .25s ease,box-shadow .25s ease}
+    .project-card:hover{transform:translateY(-7px);box-shadow:0 16px 34px rgba(36,18,65,.16)}
+    .project-image{display:block;width:100%;height:190px;object-fit:cover;background:#e9e2f5}
+    .project-content{padding:22px 24px 24px}
+    .project-content p{color:var(--muted)}
+    .project-content a{font-weight:700;text-decoration-thickness:1px;text-underline-offset:4px;color:var(--accent)}
+    .project-content a:hover{text-decoration-thickness:2px}
+    @media(max-width:760px){.project-image{height:175px}}
+    .tag{display:inline-block;background:#ffedbd;color:#634400;border-radius:20px;padding:4px 11px;font-size:12px;font-weight:700;margin-bottom:13px}
     .skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}.skill{background:var(--surface);border:1px solid var(--line);padding:18px;border-radius:14px}.skilltop{display:flex;justify-content:space-between;font-weight:700;margin-bottom:10px}.track{height:9px;background:#e8e1f2;border-radius:20px;overflow:hidden}.fill{height:100%;width:0;background:linear-gradient(90deg,#8b5cf6,#d6246e);border-radius:20px;transition:width 1s}
     .tools{display:flex;flex-wrap:wrap;gap:10px}.tools span{background:var(--surface);border:1px solid var(--line);padding:8px 14px;border-radius:25px;font-weight:600}
     .contact{background:var(--ink);color:white;border-radius:24px;padding:38px}.contact p{color:#d4c9e8}.contact a{color:#ffd46d}
@@ -95,10 +104,10 @@
   </div></section>
   <section id="projects"><div class="wrap">
     <div class="section-head"><span class="eyebrow">SELECTED WORK</span><h2>Projects I've explored</h2><p class="muted">A few projects from my learning and creative journey.</p></div>
-    <div class="cards">
-      <article class="card"><span class="tag">WEBSITE</span><h3>Bal Vikas Global School</h3><p>A website project created for a school, with information organized into clear sections.</p><p><a href="https://bvgs.onrender.com/about.html" target="_blank" rel="noopener">View website ↗</a></p></article>
-      <article class="card"><span class="tag">GAME</span><h3>Cycle Racer</h3><p>A browser-based cycle racing game made as a fun interactive project.</p><p><a href="https://remix-cycle-racer-4096.ai.studio/" target="_blank" rel="noopener">Play project ↗</a></p></article>
-      <article class="card"><span class="tag">GAME</span><h3>Bubble Blast</h3><p>A bubble-blast game project. Its code is available on GitHub.</p><p><a href="https://github.com/vanshikasharma032009-cyber/BUBBLE-BLAST-GAME" target="_blank" rel="noopener">View on GitHub ↗</a></p></article>
+    <div class="cards project-cards">
+      <article class="card project-card"><img class="project-image" src="https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=900&q=85" alt="Modern school campus building" loading="lazy"><div class="project-content"><span class="tag">WEBSITE</span><h3>Bal Vikas Global School</h3><p>A website project created for a school, with information organized into clear sections.</p><p><a href="https://bvgs.onrender.com/about.html" target="_blank" rel="noopener">View website ↗</a></p></div></article>
+      <article class="card project-card"><img class="project-image" src="https://images.unsplash.com/photo-1541625602330-2277a4c46182?auto=format&fit=crop&w=900&q=85" alt="Cyclist riding on a road" loading="lazy"><div class="project-content"><span class="tag">GAME</span><h3>Cycle Racer</h3><p>A browser-based cycle racing game made as a fun interactive project.</p><p><a href="https://remix-cycle-racer-4096.ai.studio/" target="_blank" rel="noopener">Play project ↗</a></p></div></article>
+      <article class="card project-card"><img class="project-image" src="https://images.unsplash.com/photo-1531058020387-3be344556be6?auto=format&fit=crop&w=900&q=85" alt="Bright colorful abstract event lights" loading="lazy"><div class="project-content"><span class="tag">GAME</span><h3>Bubble Blast</h3><p>A bubble-blast game project. Its code is available on GitHub.</p><p><a href="https://github.com/vanshikasharma032009-cyber/BUBBLE-BLAST-GAME" target="_blank" rel="noopener">View on GitHub ↗</a></p></div></article>
     </div>
   </div></section>
   <section id="skills"><div class="wrap">
