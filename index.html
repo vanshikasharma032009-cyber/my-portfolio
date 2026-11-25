@@ -33,6 +33,27 @@
     .dark header{background:#140e24ed}.dark .eyebrow{background:#48233b;color:#ffb7d3}.dark .tag{background:#493b20;color:#ffe3a1}
     @media(max-width:760px){nav{flex-wrap:wrap;padding:12px 0}.navlinks{order:3;width:100%;overflow:auto;gap:18px;padding-bottom:5px}.navlinks a{white-space:nowrap}.hero{grid-template-columns:1fr;gap:35px;padding-top:55px}.portrait{max-width:280px;order:-1}section{padding:60px 0}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}}
+  
+    /* Portfolio chatbot */
+    #chat-launcher{position:fixed;right:22px;bottom:22px;z-index:1000;width:60px;height:60px;border:0;border-radius:50%;background:var(--accent);color:#fff;box-shadow:0 8px 28px #1d123344;font-size:26px}
+    #chat-panel{position:fixed;right:22px;bottom:94px;z-index:1000;width:min(360px,calc(100vw - 28px));height:480px;max-height:calc(100vh - 125px);background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:20px;box-shadow:0 16px 50px #160d2b35;display:flex;flex-direction:column;overflow:hidden}
+    #chat-panel[hidden]{display:none}
+    .chat-head{display:flex;align-items:center;gap:11px;padding:15px 16px;background:var(--ink);color:#fff}
+    .chat-avatar{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:var(--accent);font-size:19px}
+    .chat-head strong{display:block;font:700 16px var(--head)}.chat-head small{color:#d8cde8}
+    #chat-close{margin-left:auto;border:0;background:transparent;color:#fff;font-size:23px}
+    #chat-log{flex:1;overflow:auto;padding:15px;display:flex;flex-direction:column;gap:10px}
+    .chat-msg{max-width:88%;padding:10px 12px;border-radius:14px;font-size:14px;line-height:1.5;overflow-wrap:anywhere}
+    .chat-msg.bot{align-self:flex-start;background:var(--bg);border:1px solid var(--line)}
+    .chat-msg.user{align-self:flex-end;background:var(--accent);color:#fff}
+    .chat-msg a{color:inherit;font-weight:700}
+    #chat-quick{display:flex;gap:7px;flex-wrap:wrap;padding:0 13px 10px}
+    #chat-quick button{border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:18px;padding:6px 10px;font-size:12px}
+    #chat-form{display:flex;gap:8px;padding:12px;border-top:1px solid var(--line)}
+    #chat-input{min-width:0;flex:1;border:1px solid var(--line);border-radius:22px;padding:10px 13px;background:var(--bg);color:var(--ink);font:14px var(--body)}
+    #chat-form button{border:0;border-radius:50%;width:40px;height:40px;background:var(--accent);color:white;font-size:17px}
+    @media(max-width:480px){#chat-launcher{right:15px;bottom:15px}#chat-panel{right:14px;bottom:85px}}
+
   </style>
 </head>
 <body>
@@ -99,5 +120,39 @@
   const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.style.width=entry.target.dataset.width+"%";observer.unobserve(entry.target)}}),{threshold:.3});
   document.querySelectorAll(".fill").forEach(el=>observer.observe(el));
 </script>
+
+<div id="chatbot-widget">
+  <section id="chat-panel" aria-label="Portfolio chat assistant" hidden>
+    <div class="chat-head"><div class="chat-avatar">✦</div><div><strong>Vanshika's Assistant</strong><small>Ask about projects, skills & contact</small></div><button id="chat-close" type="button" aria-label="Close chat">×</button></div>
+    <div id="chat-log" aria-live="polite"><div class="chat-msg bot">Namaste! Main Vanshika ka portfolio assistant hoon. Aap unke projects, skills, AI tools ya contact ke baare mein pooch sakte hain.</div></div>
+    <div id="chat-quick"><button type="button" data-question="Projects dikhao">Projects</button><button type="button" data-question="Skills aur AI tools">Skills & AI tools</button><button type="button" data-question="Contact kaise karein?">Contact</button></div>
+    <form id="chat-form"><input id="chat-input" type="text" placeholder="Type your message..." autocomplete="off" aria-label="Type your message" required><button type="submit" aria-label="Send message">➤</button></form>
+  </section>
+  <button id="chat-launcher" type="button" aria-label="Open chat" aria-expanded="false">✦</button>
+</div>
+<script>
+(function(){
+  const launcher=document.getElementById('chat-launcher'),panel=document.getElementById('chat-panel'),close=document.getElementById('chat-close'),log=document.getElementById('chat-log'),form=document.getElementById('chat-form'),input=document.getElementById('chat-input');
+  if(!launcher||!panel)return;
+  const wa='https://wa.me/919671970922',mail='mailto:vanshikasharma032009@gmail.com';
+  function toggle(open){panel.hidden=!open;launcher.setAttribute('aria-expanded',String(open));if(open)input.focus()}
+  launcher.addEventListener('click',()=>toggle(panel.hidden));close.addEventListener('click',()=>toggle(false));
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!panel.hidden)toggle(false)});
+  function add(text,who,links){const el=document.createElement('div');el.className='chat-msg '+who;el.textContent=text;if(links){links.forEach(item=>{const a=document.createElement('a');a.href=item.href;a.textContent=' '+item.label;a.target=item.href.startsWith('http')?'_blank':'_self';a.rel='noopener noreferrer';el.appendChild(a)})}log.appendChild(el);log.scrollTop=log.scrollHeight}
+  function answer(q){
+    const s=q.toLowerCase(),hi=/[ऀ-ॿ]|kaise|kya|batao|dikhao|hai|karna|karo|mujhe|aap|namaste|hindi|kitna/.test(s);
+    if(/hello|hi\b|hey|namaste|hii/.test(s))return hi?'Namaste! Aap Vanshika ke projects, skills, AI tools ya contact ke baare mein pooch sakte hain.':'Hello! Ask me about Vanshika’s projects, skills, AI tools or contact details.';
+    if(/project|work|website|game|cycle|bubble/.test(s))return hi?'Vanshika ke portfolio mein Bal Vikas Global School website, Cycle Racer game aur Bubble Blast game shamil hain.':'Vanshika’s featured work includes the Bal Vikas Global School website, Cycle Racer game and Bubble Blast game.';
+    if(/skill|tool|ai|chatgpt|claude|gemini|canva/.test(s))return hi?'Vanshika AI tools aur prompting, website building, chatbot building, digital marketing, Canva design aur video editing seekh rahi hain. Tools mein ChatGPT, Claude, Gemini, Canva, Runway aur CapCut shamil hain.':'Vanshika is learning AI prompting, website building, chatbot building, digital marketing, Canva design and video editing. Tools include ChatGPT, Claude, Gemini, Canva, Runway and CapCut.';
+    if(/contact|phone|number|whatsapp|email|hire|price|rate|sampark|baat/.test(s))return hi?'Aap WhatsApp ya email par contact kar sakte hain. Project pricing ke liye directly message karein.':'You can contact Vanshika on WhatsApp or email. Please message her directly for project pricing.';
+    if(/about|who|vanshika|kaun|kahan|where/.test(s))return hi?'Vanshika Digital Marketing with AI seekh rahi hain aur websites, chatbots, videos aur games banati hain.':'Vanshika is learning Digital Marketing with AI and builds websites, chatbots, videos and games.';
+    return hi?'Is baare mein portfolio par detail available nahi hai. Aap Vanshika ko WhatsApp ya email kar sakte hain.':'That detail is not listed on the portfolio. You can ask Vanshika directly on WhatsApp or email.';
+  }
+  function send(q){q=(q||'').trim();if(!q)return;add(q,'user');const a=answer(q);const links=/contact|phone|number|whatsapp|email|hire|sampark|baat|price|rate/i.test(q)?[{href:wa,label:'WhatsApp'},{href:mail,label:'Email'}]:[];add(a,'bot',links)}
+  form.addEventListener('submit',e=>{e.preventDefault();send(input.value);input.value='';input.focus()});
+  document.querySelectorAll('#chat-quick button').forEach(b=>b.addEventListener('click',()=>send(b.dataset.question)));
+})();
+</script>
+
 </body>
 </html>
