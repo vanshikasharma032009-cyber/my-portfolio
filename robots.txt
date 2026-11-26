@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://my-portfolio-54hs.vercel.app/sitemap.xml
+Sitemap: https://my-portfolio-flame-six-29.vercel.app/sitemap.xml
