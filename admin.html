@@ -17,5 +17,5 @@ async function loadContent(){const {data,error}=await client.from('portfolio_con
 $('loginBtn').onclick=async()=>{if(!client){status('loginStatus','Supabase is not configured yet. Add your project URL and publishable/anon key in supabase-config.js, then run the SQL setup file.');return}const {error}=await client.auth.signInWithPassword({email:$('email').value,password:$('password').value});status('loginStatus',error?error.message:'Signed in.');await showSession()};
 $('logoutBtn').onclick=async()=>{await client.auth.signOut();await showSession()};
 $('saveBtn').onclick=async()=>{if(!client)return;const content={};for(const id of ['headline','tagline','about','projects','skills','photo'])content[id]=$(id).value;const {error}=await client.from('portfolio_content').upsert({id:1,content,updated_at:new Date().toISOString()});status('saveStatus',error?'Save failed: '+error.message:'Saved securely to Supabase. Public pages still need the content integration step to display these edits.')};
-if(client)showSession();else status('loginStatus','Setup required: add Supabase URL + publishable key in supabase-config.js and run supabase-setup.sql in Supabase SQL Editor.');
+if(client)showSession();else status('loginStatus','Setup required: add Supabase URL + publishable key in supabase-config.js and run schema.sql in Supabase SQL Editor.');
 </script></body></html>
