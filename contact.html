@@ -116,7 +116,15 @@
     .site-footer .footer-social a{border-color:#241A1266}
     .site-footer .footer-bottom{border-top-color:#241A1244}
 
-    .app-icon{width:24px!important;height:24px!important;flex:0 0 24px;vertical-align:middle;display:inline-block}\n</style></head><body><header><nav class="wrap"><a class="logo" href="index.html">Vanshika Sharma<span style="color:var(--accent)">.</span></a><div class="navlinks"><a  href="index.html">Home</a><a  href="about.html">About</a><a  href="projects.html">Projects</a><a  href="skills.html">Skills</a><a aria-current="page" href="contact.html">Contact</a></div><button id="theme" type="button" aria-label="Toggle color theme">☾</button></nav></header><main class="page-main" id="top"><section id="contact"><div class="wrap"><div class="contact">
+    .app-icon{width:24px!important;height:24px!important;flex:0 0 24px;vertical-align:middle;display:inline-block}\n
+    /* Single-line portfolio marquee at the top */
+    .top-marquee{overflow:hidden;white-space:nowrap;background:#241a12;color:#fff;padding:9px 0;border-bottom:2px solid var(--accent)}
+    .top-marquee-track{display:flex;width:max-content;animation:portfolio-marquee 30s linear infinite}
+    .top-marquee-group{display:flex;align-items:center;gap:30px;padding-right:30px;font-size:12px;font-weight:800;letter-spacing:1.35px}
+    .top-marquee .spark{color:#ffbd26;font-size:16px}
+    @keyframes portfolio-marquee{to{transform:translateX(-50%)}}
+    @media(prefers-reduced-motion:reduce){.top-marquee-track{animation:none}}
+</style></head><body><header><nav class="wrap"><a class="logo" href="index.html">Vanshika Sharma<span style="color:var(--accent)">.</span></a><div class="navlinks"><a  href="index.html">Home</a><a  href="about.html">About</a><a  href="projects.html">Projects</a><a  href="skills.html">Skills</a><a aria-current="page" href="contact.html">Contact</a></div><button id="theme" type="button" aria-label="Toggle color theme">☾</button></nav></header><div class="top-marquee" aria-label="Portfolio highlights"><div class="top-marquee-track"><div class="top-marquee-group"><span>AI & DIGITAL MARKETING</span><span class="spark">✦</span><span>WEB DEVELOPMENT</span><span class="spark">✦</span><span>CREATIVE PROJECTS</span><span class="spark">✦</span><span>CHATBOT BUILDING</span><span class="spark">✦</span><span>LEARN · CREATE · GROW</span><span class="spark">✦</span></div><div class="top-marquee-group" aria-hidden="true"><span>AI & DIGITAL MARKETING</span><span class="spark">✦</span><span>WEB DEVELOPMENT</span><span class="spark">✦</span><span>CREATIVE PROJECTS</span><span class="spark">✦</span><span>CHATBOT BUILDING</span><span class="spark">✦</span><span>LEARN · CREATE · GROW</span><span class="spark">✦</span></div></div></div><main class="page-main" id="top"><section id="contact"><div class="wrap"><div class="contact">
     <span class="eyebrow">LET'S CONNECT</span><h1 class="page-title">Contact Vanshika Sharma</h1><h2 style="margin-top:15px">Have an idea?</h2>
     <p>For project enquiries or questions about my work, you can reach out by phone, WhatsApp or email.</p>
     <p style="margin:14px 0 20px;font-weight:700;color:#fff">Phone: <a href="tel:+919671970922">9671970922</a></p>
