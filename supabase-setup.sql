@@ -9,5 +9,5 @@ grant select, insert, update on public.portfolio_content to authenticated;
 drop policy if exists "Authenticated admins can manage portfolio content" on public.portfolio_content;
 create policy "Authenticated admins can manage portfolio content"
 on public.portfolio_content for all to authenticated
-using (auth.uid() in (select id from auth.users where email = 'REPLACE_WITH_YOUR_ADMIN_EMAIL'))
-with check (auth.uid() in (select id from auth.users where email = 'REPLACE_WITH_YOUR_ADMIN_EMAIL'));
+using ((auth.jwt() ->> 'email') = 'REPLACE_WITH_YOUR_ADMIN_EMAIL')
+with check ((auth.jwt() ->> 'email') = 'REPLACE_WITH_YOUR_ADMIN_EMAIL');
